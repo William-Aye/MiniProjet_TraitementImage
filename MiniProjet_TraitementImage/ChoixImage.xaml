@@ -1,0 +1,127 @@
+﻿<Page x:Class="MiniProjet_TraitementImage.ChoixImage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MiniProjet_TraitementImage"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      ShowsNavigationUI="False"
+      Title="Menu">
+
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Width" Value="275"/>
+            <Setter Property="Height" Value="75"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10" />
+                </Style>
+            </Style.Resources>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Name ="testText"  Text="HelloWorld" FontSize="50" VerticalAlignment="Bottom"/>
+        <Label FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Gray">Menu</Label>
+        <Button Name="BoutonRun" Width="120" Height="80" Grid.Column="4"
+                Content="Run" FontSize="40" Click="RunClick"/>
+        
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Name="BoutonAutomne"   Click="ImageClick" Grid.Row="0">Automne</Button>
+            <Button Name="BoutonCascade"   Click="ImageClick" Grid.Row="1">Cascade</Button>
+            <Button Name="BoutonChaton"    Click="ImageClick" Grid.Row="2">Chaton</Button>
+            <Button Name="BoutonCoco"      Click="ImageClick" Grid.Row="3">Coco</Button>
+            <Button Name="BoutonHibiscus"  Click="ImageClick" Grid.Row="4">Hibiscus</Button>
+            <Button Name="BoutonJoconde"   Click="ImageClick" Grid.Row="5">Joconde</Button>
+            <Button Name="BoutonLac"       Click="ImageClick" Grid.Row="6">Lac</Button>
+            <Button Name="BoutonLena"      Click="ImageClick" Grid.Row="7">Lena</Button>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Name="BoutonMario"     Click="ImageClick" Grid.Row="0">Mario</Button>
+            <Button Name="BoutonMontagne"  Click="ImageClick" Grid.Row="1">Montagne</Button>
+            <Button Name="BoutonParapluie" Click="ImageClick" Grid.Row="2">Parapluies</Button>
+            <Button Name="BoutonPlage"     Click="ImageClick" Grid.Row="3">Plage</Button>
+            <Button Name="BoutonPoisson"   Click="ImageClick" Grid.Row="4">Poisson</Button>
+            <Button Name="BoutonVangogh"   Click="ImageClick" Grid.Row="5">Vangogh</Button>
+            <Button Name="BoutonZelda"     Click="ImageClick" Grid.Row="6">Zelda</Button>
+        </Grid>
+
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Name="BoutonAucun"          Click="ParamClick" Grid.Row="0">Aucun</Button>
+            <Button Name="BoutonAgrandir"       Click="ParamClick" Grid.Row="1">Agrandir</Button>
+            <Button Name="BoutonRetrecir"       Click="ParamClick" Grid.Row="2">Rétrécir</Button>
+            <Button Name="BoutonNuance"         Click="ParamClick" Grid.Row="3">Nuance</Button>
+            <Button Name="BoutonSuperpositions" Click="ParamClick" Grid.Row="4">Superpositions</Button>
+            <Button Name="BoutonMiroir"         Click="ParamClick" Grid.Row="5">Miroir</Button>
+            <Button Name="BoutonRotation"       Click="ParamClick" Grid.Row="6">Rotation</Button>
+            <Button Name="BoutonHistogramme"    Click="ParamClick" Grid.Row="7">Histogramme</Button>
+            <Button Name="BoutonFiltre"         Click="ParamClick" Grid.Row="8">Filtre</Button>
+        </Grid>
+
+        <Grid Grid.Column="3">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Name="BoutonConstraste" Click="FiltreClick" Grid.Row="0">Contraste</Button>
+            <Button Name="BoutonFlou"       Click="FiltreClick" Grid.Row="1">Flou</Button>
+            <Button Name="BoutonFlouGauss"  Click="FiltreClick" Grid.Row="2">Flou de Gauss</Button>
+            <Button Name="BoutonAmeBords"   Click="FiltreClick" Grid.Row="3">Amélioration des bords</Button>
+            <Button Name="BoutonDetBords"   Click="FiltreClick" Grid.Row="4">Détection des bords</Button>
+            <Button Name="BoutonRepoussage" Click="FiltreClick" Grid.Row="5">Repoussage</Button>
+            <Button Name="BoutonSobel"      Click="FiltreClick" Grid.Row="6">Filtre de Sobel</Button>
+            <Button Name="BoutonNettete"    Click="FiltreClick" Grid.Row="7">Amélioration de la netteté</Button>
+            <Button Name="BoutonEmboss"     Click="FiltreClick" Grid.Row="8">Emboss</Button>
+        </Grid>
+
+    </Grid>
+</Page>

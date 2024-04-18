@@ -1,0 +1,31 @@
+﻿<Page x:Class="MiniProjet_TraitementImage.PresentationImage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MiniProjet_TraitementImage"
+      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      ShowsNavigationUI="False"
+      Title="PresentationImage">
+
+    <Grid>
+        <TextBlock Name ="testText"  Text="HelloWorld" FontSize="50" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+        <TextBlock Name ="tbStatus"  Text="HelloWorld" FontSize="50" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+        <StackPanel>
+            <TextBox Name ="BarText" Width="240" Height="60" Margin="100,500,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+            <Button Name="BoutonSave" Content="Save" Click="SaveClick" Width="120" Height="80" FontSize="40" Margin="100,50,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+        </StackPanel>
+        <Button Name="BoutonRun" Width="120" Height="80"
+                Margin="100,60,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"
+                Content="Run" FontSize="40" Click="RunClick"/>
+
+        <Label FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Gray">Apercu</Label>
+
+        <Image Width="500" Name="FrontImage"/>
+
+        <CheckBox Content="CheckBox" HorizontalAlignment="Center" Margin="0,-264,0,0" VerticalAlignment="Top"/>
+    </Grid>
+
+</Page>
